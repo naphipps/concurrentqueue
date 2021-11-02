@@ -12,6 +12,8 @@ target_include_directories(${PROJECT_NAME}
                 $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/>
 )
 
+target_compile_features(${PROJECT_NAME} INTERFACE cxx_std_11)
+
 install(TARGETS ${PROJECT_NAME} 
     EXPORT ${PROJECT_NAME}Targets
 )
